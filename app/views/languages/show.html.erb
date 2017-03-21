@@ -1,0 +1,21 @@
+<h1><%= @language.name %></h1>
+<p><%= link_to "Delete Language", language_path(@language),
+                           :data => {:confirm => "You sure to Delete this section?",
+                                     :method => "delete"} %></p>
+  <p><%= link_to "Return to languages", languages_path %></p>
+<h2>Skills and Projects</h2>
+<p><%= link_to "New Skill", new_language_skill_path(@language, @skill) %></p>
+
+<% if @language.skills.any? %>
+
+    <ul>
+      <% @language.skills.each do |skill| %>
+        <li>
+          Skill: <%= skill.skill %> <br>
+          Project: <a href="<%= skill.project %>"> Click to see project</a>
+        </li><br> <hr>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no skills yet!</p>
+  <% end %>
