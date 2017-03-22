@@ -8,11 +8,11 @@ class LanguagesController < ApplicationController
       render :show
     end
     def new
-      @language = Language.new
+      @language = current_user.languages.build
       render :new
     end
     def create
-      @language = Language.new(list_params)
+      @language = current_user.languages.build(list_params)
       if @language.save
         redirect_to  languages_path
       else

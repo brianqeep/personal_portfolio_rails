@@ -1,8 +1,13 @@
-<%= form_for [@language, @skill] do |f| %>
-    <%= f.label :skill %>
-    <%= f.text_field :skill %>
+<h1 class="head-title gstyle1 text-center">New skills and project url</h1>
+<hr>
+<div class="form-new-lang">
+  <%= form_for [@language, @skill] do |f| %>
+      <%= f.label :skill %>
+      <%= f.text_field :skill %>
 
-    <%= f.label :project %>
-    <%= f.text_field :project %>
-    <p><%= f.submit %></p>
-  <% end %>
+      <%= f.label :project %>
+      <%= f.text_field :project %>
+      <p><%= f.submit %></p>
+    <% end %>
+
+</div>

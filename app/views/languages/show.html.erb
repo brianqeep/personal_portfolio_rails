@@ -1,16 +1,19 @@
-<h1><%= @language.name %></h1>
+<h1 class="head-title gstyle1 text-center"><%= @language.name %></h1>
+<%if user_signed_in?%>
 <p><%= link_to "Delete Language", language_path(@language),
                            :data => {:confirm => "You sure to Delete this section?",
                                      :method => "delete"} %></p>
-  <p><%= link_to "Return to languages", languages_path %></p>
-<h2>Skills and Projects</h2>
+<%end%>
+<h4 class="gstyle2">Skills and Projects</h4>
+<hr>
+<%if user_signed_in?%>
 <p><%= link_to "New Skill", new_language_skill_path(@language, @skill) %></p>
-
+<%end%>
 <% if @language.skills.any? %>
 
     <ul>
       <% @language.skills.each do |skill| %>
-        <li>
+        <li class="gstyle3">
           Skill: <%= skill.skill %> <br>
           Project: <a href="<%= skill.project %>"> Click to see project</a>
         </li><br> <hr>

@@ -1,8 +1,10 @@
-<h2>Languages</h2>
-<%= link_to "New Language", new_language_path %>
+<h2 class="text-center head-title gstyle1">Programming Languages</h2>
+<% if user_signed_in?%>
+<button ><%= link_to "New Language", new_language_path, :class => 'btn button-index' %></button>
+<%end%>
 <hr>
 <ul>
     <% @languages.each do |language| %>
-      <li><%= link_to language.name, language_path(language) %></li>
+      <li class="gstyle31 thumbnail"><%= link_to language.name, language_path(language) %></li>
     <% end %>
   </ul>

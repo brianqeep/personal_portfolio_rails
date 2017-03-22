@@ -1,0 +1,34 @@
+.navbar{
+  background-color: #FAA646;
+}
+.head-title{
+  margin-top: 5%;
+}
+.icon{
+  font-size: 30px;
+}
+.gstyle{
+  font-family: 'Audiowide', cursive;
+}
+.gstyle1{
+  font-family: 'Jura', sans-serif;
+}
+.gstyle2{
+  font-family: 'Marcellus SC', serif;
+}
+.gstyle31{
+  font-family: 'Cinzel Decorative', cursive;
+  width: 70%;
+  height: 100px;
+  margin-left: 12%;
+  font-size: 30px;
+  text-align: center;
+  box-shadow: 3px 3px 3px 3px #FAA646;
+  text-decoration: none;
+}
+.form-new-lang{
+  margin-left: 37%;
+}
+.button-index{
+  color: #337AB7;
+}
