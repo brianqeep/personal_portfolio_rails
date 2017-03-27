@@ -27,6 +27,6 @@ class LanguagesController < ApplicationController
 
   private
     def list_params
-      params.require(:language).permit(:name)
+      params.require(:language).permit(:name, :image)
     end
   end
