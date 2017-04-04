@@ -3,6 +3,7 @@ class Language < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   has_many :skills
+  has_many :comments
   belongs_to :user
   validates :name, :presence => true
   end

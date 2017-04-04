@@ -1,11 +1,16 @@
+body{
+
+}
 .navbar{
-  background-color: #FAA646;
+  background-color: ;
+  height: 100px !important;
 }
 .head-title{
   margin-top: 5%;
 }
 .icon{
-  font-size: 30px;
+  font-size: 40px;
+  color: ;
 }
 .gstyle{
   font-family: 'Audiowide', cursive;
@@ -23,7 +28,7 @@
   margin-left: 12%;
   font-size: 30px;
   text-align: center;
-  box-shadow: 3px 3px 3px 3px #FAA646;
+  box-shadow: 1px 1px 1px 1px #4169e1;
   text-decoration: none;
 }
 .form-new-lang{
@@ -31,4 +36,13 @@
 }
 .button-index{
   color: #337AB7;
+}
+.log{
+  color: #fff !important;
+}
+.comment-name{
+  color: grey;
+}
+.head-image{
+  height: 200px;
 }

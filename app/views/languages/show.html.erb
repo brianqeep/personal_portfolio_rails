@@ -4,21 +4,45 @@
                            :data => {:confirm => "You sure to Delete this section?",
                                      :method => "delete"} %></p>
 <%end%>
-<h4 class="gstyle2">Skills and Projects</h4>
-<hr>
-<%if user_signed_in?%>
-<p><%= link_to "New Skill", new_language_skill_path(@language, @skill) %></p>
-<%end%>
-<% if @language.skills.any? %>
+<div class="container">
+  <div class="skills-proj col-md-7">
+    <h4 class="gstyle2">Skills and Projects</h4>
+    <hr>
+    <%if user_signed_in?%>
+    <p><%= link_to "New Skill", new_language_skill_path(@language, @skill) %></p>
+    <%end%>
+    <% if @language.skills.any? %>
 
-    <ul>
-      <% @language.skills.each do |skill| %>
-        <li class="gstyle3">
-          Skill: <%= skill.skill %> <br>
-          Project: <a href="<%= skill.project %>"> Click to see project</a>
-        </li><br> <hr>
+        <ul>
+          <% @language.skills.each do |skill| %>
+            <li class="gstyle3">
+              Skill: <%= skill.skill %> <br>
+              Project: <a href="<%= skill.project %>"> Click to see project</a>
+            </li><br> <hr>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>There are no skills yet!</p>
       <% end %>
-    </ul>
-  <% else %>
-    <p>There are no skills yet!</p>
-  <% end %>
+  </div>
+
+  <div class="comments col-md-5">
+    <h4>Comments</h4>
+
+    <p><%= link_to "New Comment", new_language_comment_path(@language, @comment), class:"btn btn-primary" %></p>
+    <% if @language.comments.any? %>
+
+        <ul>
+          <% @language.comments.each do |comment| %>
+            <p class="gstyle3">
+              "<%= comment.comment %>" ~ <i class="comment-name"><%=comment.name %></i> 
+            </p><br> <hr>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>There are no comments yet!</p>
+      <% end %>
+  </div>
+
+
+</div>
