@@ -27,7 +27,7 @@
   </div>
 
   <div class="comments col-md-5">
-    <h4>Comments</h4>
+    <h4 class="gstyle2">Comments</h4>
 
     <p><%= link_to "New Comment", new_language_comment_path(@language, @comment), class:"btn btn-primary" %></p>
     <% if @language.comments.any? %>
@@ -35,7 +35,7 @@
         <ul>
           <% @language.comments.each do |comment| %>
             <p class="gstyle3">
-              "<%= comment.comment %>" ~ <i class="comment-name"><%=comment.name %></i> 
+              "<%= comment.comment %>" ~ <i class="comment-name"><%=comment.name %></i>
             </p><br> <hr>
           <% end %>
         </ul>

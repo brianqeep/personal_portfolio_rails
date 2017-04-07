@@ -25,12 +25,12 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a class="navbar-brand icon gstyle" href="/">Brian <br><br> Kiptoo</a>
+           <a class="navbar-brand icon gstyle" href="/">Home</a>
          </div>
          <div id="navbar" class="navbar-collapse collapse">
            <ul class="nav navbar-nav navbar-right">
              <%if !user_signed_in?%>
-              <p class="navbar-brand log gstyle"><%= link_to "Login", new_user_session_path%></p>
+              <p class="navbar-brand log gstyle"><%= link_to "Admin", new_user_session_path%></p>
              <%end%>
              <%if user_signed_in?%>
               <p class="navbar-brand log gstylefont-family: 'Marcellus SC', serif;"><%= link_to "Logout", destroy_user_session_path, :method => :delete%></p>
