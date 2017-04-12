@@ -1,6 +1,8 @@
-body{
+html, body{
   background: url(bg4.jpg) no-repeat center center fixed;
   background-size: cover;
+  height: 100%;
+   margin: 0;
 }
 .navbar{
   height: 100px;
@@ -101,11 +103,4 @@ a{
   font-size: 18px;
   font-style: italic;
   font-weight: 80;
-}
-.footer{
-  height: 50px;
-  background-color: #2D4353;
-}
-.number{
-  color: #fff;
 }
