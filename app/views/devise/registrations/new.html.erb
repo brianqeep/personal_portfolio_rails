@@ -1,3 +1,4 @@
+<% if user_signed_in?%>
 <h2 class="head-title">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -27,3 +28,7 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<% end %>
+<p>
+  ONLY ONE ADMIN
+</p>
