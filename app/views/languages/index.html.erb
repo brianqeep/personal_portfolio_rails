@@ -1,10 +1,27 @@
-<h2 class="text-center head-title gstyle1">Programming Languages</h2>
+<div class="header-index">
+  <p class="head-text text-center">Brian Kiptoo</p>
+  <p class="head-text-1 text-center">(Software developer)</p>
+</div>
+<div class="container about-me">
+  <h2 class="text-center index-title-1">Bio</h2><hr>
+  <div class="col-md-3">
+    <%= image_tag("me.jpg", :alt => "me" , :class => "ppic center") %>
+  </div>
+  <div class="col-md-9">
+    <p class="about-text">Welcome, my name is Brian. I am a software developer who loves to write code to build great and creative products. I appreciate good design and I am seeing it's importance more then ever in todays apps, web sites and products.</p>
+  </div>
+</div>
+
+<h2 class="text-center index-title-2">Projects</h2>
 <% if user_signed_in?%>
 <button ><%= link_to "New Language", new_language_path, :class => 'btn button-index' %></button>
 <%end%>
 <hr>
 <ul>
     <% @languages.each do |language| %>
-      <li class="gstyle31 thumbnail"><%= image_tag language.image.url(:medium), class:"col-md-2"%><%= link_to language.name, language_path(language), class:"col-md-10" %></li>
+    <%= link_to language_path(language) do%>
+      <li class="gstyle31 thumbnail"><%= image_tag language.image.url(:medium), :class=> "col-md-2"%> <%= (language.name)%></li>
+    <% end%>
+
     <% end %>
   </ul>

@@ -1,11 +1,33 @@
+body{
+  background: url(bg4.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
 .navbar{
-  height: 100px !important;
+  height: 100px;
+  background: linear-gradient(#fff 20%, #293f50);
+  border: 0;
+
 }
 .head-title{
-  margin-top: 5%;
+  margin-top: 12%;
+  margin-left: 30%;
 }
 .icon{
   font-size: 40px;
+}
+.index-title-1{
+  margin-left: 150px;
+  margin-top: 2%;
+  font-family: 'Jura', sans-serif;
+}
+.index-title-2{
+  margin-left: 70px;
+  margin-top: 2%;
+  font-family: 'Jura', sans-serif;
+}
+.index-title{
+  margin-top: 2%;
+  font-family: 'Jura', sans-serif;
 }
 .gstyle{
   font-family: 'Audiowide', cursive;
@@ -17,13 +39,14 @@
   font-family: 'Marcellus SC', serif;
 }
 .gstyle31{
+  color: #b77033;
   font-family: 'Cinzel Decorative', cursive;
   width: 70%;
-  height: 150px;
+  height: 140px;
   margin-left: 12%;
   font-size: 30px;
   text-align: center;
-  box-shadow: 1px 1px 1px 1px #4169e1;
+  box-shadow: 0 16px 8px -8px #b77033;
   text-decoration: none;
 }
 .form-new-lang{
@@ -40,4 +63,49 @@
 }
 .head-image{
   height: 200px;
+}
+.ppic{
+  margin-left: 45%;
+  height: 100px;
+  width: 130px;
+  border-radius: 4px;
+}
+.icon-top{
+  color: #337AB7;
+}
+.about-me{
+  width: 80%;
+  margin-left: 5%;
+}
+.about-text{
+  font-size: 18px;
+  font-family: 'Philosopher', sans-serif;
+}
+a{
+  text-decoration: none !important;
+}
+.header-index{
+  margin-top: 7.5%;
+  background-color: #2D4353;
+  height: 170px;
+}
+.head-text{
+  font-family: 'Petit Formal Script', cursive;  color: #fff;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-top: 5%;
+}
+.head-text-1{
+  font-family: 'Jura', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 80;
+}
+.footer{
+  height: 50px;
+  background-color: #2D4353;
+}
+.number{
+  color: #fff;
 }

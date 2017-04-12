@@ -1,12 +1,12 @@
-<h1 class="head-title gstyle1 text-center"><%= @language.name %></h1>
+<h1 class="head-title gstyle1"><%= @language.name %></h1>
 <%if user_signed_in?%>
 <p><%= link_to "Delete Language", language_path(@language),
                            :data => {:confirm => "You sure to Delete this section?",
                                      :method => "delete"} %></p>
 <%end%>
 <div class="container">
-  <div class="skills-proj col-md-7">
-    <h4 class="gstyle2">Skills and Projects</h4>
+  <div class="skills-proj col-md-6">
+    <h3 class="gstyle2">Skills and Projects</h3>
     <hr>
     <%if user_signed_in?%>
     <p><%= link_to "New Skill", new_language_skill_path(@language, @skill) %></p>
@@ -15,10 +15,10 @@
 
         <ul>
           <% @language.skills.each do |skill| %>
-            <li class="gstyle3">
+            <p class="gstyle3">
               Skill: <%= skill.skill %> <br>
-              Project: <a href="<%= skill.project %>"> Click to see project</a>
-            </li><br> <hr>
+              Project: <a href="<%= skill.project %>" target="_blank"> View Project</a>
+            </p><br> <hr>
           <% end %>
         </ul>
       <% else %>
@@ -26,8 +26,8 @@
       <% end %>
   </div>
 
-  <div class="comments col-md-5">
-    <h4 class="gstyle2">Comments</h4>
+  <div class="comments col-md-6">
+    <h3 class="gstyle2">Comments</h3>
 
     <p><%= link_to "New Comment", new_language_comment_path(@language, @comment), class:"btn btn-primary" %></p>
     <% if @language.comments.any? %>
