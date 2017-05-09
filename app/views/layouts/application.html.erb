@@ -6,15 +6,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="/stylesheets/bootstrap.css" media="screen" title="no title">
-    <link rel="stylesheet" href="/stylesheets/styles.css" media="screen" title="no title">
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" media="screen" title="no title">
+    <link rel="stylesheet" href="/stylesheets/styles.css" media="screen" title="no title">
   <body>
     <div class="container toppage ">
        <nav class="navbar navbar-fixed-top">
@@ -32,7 +34,7 @@
            <ul class="nav navbar-nav navbar-right">
              <p></p>
              <%if !user_signed_in?%>
-              <p class="navbar-brand log gstyle"><%= link_to 'Blog', 'https://www.brianqeep.blogspot.co.ke', target: :_blank %> <span class="icon-top">||</span> <%= link_to "Admin", new_user_session_path%></p>
+              <p class="navbar-brand log gstyle"><%= link_to 'Blog', 'https://www.brianqeep.blogspot.co.ke', target: :_blank %></p>
              <%end%>
              <%if user_signed_in?%>
               <p class="navbar-brand log gstylefont-family: 'Marcellus SC', serif;"><%= link_to "Logout", destroy_user_session_path, :method => :delete%></p>

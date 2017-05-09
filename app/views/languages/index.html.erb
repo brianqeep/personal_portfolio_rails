@@ -1,6 +1,6 @@
 <div class="header-index">
   <p class="head-text text-center">Brian Kiptoo</p>
-  <p class="head-text-1 text-center">(Software developer)</p>
+  <p class="head-text-1 text-center">(Full Stack Web Developer)</p>
 </div>
 <div class="container about-me">
   <h2 class="text-center index-title-1">Bio</h2><hr>
@@ -8,7 +8,7 @@
     <%= image_tag("me.jpg", :alt => "me" , :class => "ppic center") %>
   </div>
   <div class="col-md-9">
-    <p class="about-text">Welcome, my name is Brian. I am a software developer who loves to write code to build great and creative products. I appreciate good design and I am seeing it's importance more then ever in todays apps, web sites and products.</p>
+    <p class="about-text">Welcome, my name is Brian. A creative, focused and self-driven web developer with an eye for quality. A critical thinker and strong communicator with the ability to convey ideas clearly with an emphasis on client satisfaction.</p>
   </div>
 </div>
 
@@ -17,11 +17,38 @@
 <button ><%= link_to "New Language", new_language_path, :class => 'btn button-index' %></button>
 <%end%>
 <hr>
-<ul>
-    <% @languages.each do |language| %>
-    <%= link_to language_path(language) do%>
-      <li class="gstyle31 thumbnail"><%= image_tag language.image.url(:medium), :class=> "col-md-2"%> <%= (language.name)%></li>
-    <% end%>
+<div class="container lang-text">
+  <ul>
+      <% @languages.each do |language| %>
+      <%= link_to language_path(language) do%>
+        <li class="gstyle31 thumbnail col-md-3"><%= (language.name)%></li>
+      <% end%>
 
-    <% end %>
-  </ul>
+      <% end %>
+    </ul>
+</div>
+<div class="technology container">
+  <h2 class="text-center index-title-3">Technical skills</h2>
+  <hr>
+  <div class="col-md-3 left-t">
+    <span class="glyphicon glyph glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Ruby</span><br>
+    <span class="glyphicon glyph glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Rails</span><br>
+    <span class="glyphicon glyph glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Javascript</span><br>
+    <span class="glyphicon glyph glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">jQquery</span><br>
+    <span class="glyphicon glyph glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Ember.js</span><br>
+  </div>
+  <div class="col-md-3 center-t">
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Angular.js 2</span><br>
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Typescript</span><br>
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Git</span><br>
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Bootstrap</span><br>
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">PostgreSQL</span><br>
+  </div>
+  <div class="col-md-3 right-t">
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">HTML5</span><br>
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">CSS3</span><br>
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Linux</span><br>
+    <span class="glyphicon glyphy glyphicon-ok-sign" aria-hidden="true"></span> <span class="t1">Active record</span><br>
+
+  </div>
+</div>
