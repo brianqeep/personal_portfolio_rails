@@ -1,12 +1,13 @@
-<h1 class="head-title gstyle1 text-center">New Comment on the project</h1>
+<h1 class="head-title2 gstyle1 text-center">New Comment on the project</h1>
 <hr>
-<div class="form-new-lang">
+<div class="form-new-comment">
   <%= form_for [@language, @comment] do |f| %>
       <%= f.label :comment %>
       <%= f.text_field :comment %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.label :Author %>
+      <%= f.text_field :name %><br>
+
       <p><%= f.submit %></p>
     <% end %>
 

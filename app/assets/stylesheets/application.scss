@@ -20,6 +20,7 @@
    background-size: cover;
    height: 100%;
     margin: 0;
+    overflow-x: hidden;
  }
  .navbar{
    height: 100px;
@@ -30,6 +31,9 @@
  .head-title{
    margin-top: 12%;
    margin-left: 30%;
+ }
+ .head-title2{
+    margin-top: 12%;
  }
  .icon{
    font-size: 40px;
@@ -68,6 +72,9 @@
  }
  .form-new-lang{
    margin-left: 37%;
+ }
+ .form-new-comment{
+   margin-left: 33%;
  }
  .button-index{
    color: #337AB7;
